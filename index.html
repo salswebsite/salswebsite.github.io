@@ -5,22 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Salman Basheer · Portfolio</title>
 <meta name="description" content="Portfolio of Salman Basheer — Electronics student, open-source contributor, and competitive programmer from Chennai." />
-<noscript><style>.loader{display:none}
-/* folder motion */
-.hintrow{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;max-width:980px;margin:-30px auto 40px}
-.hintrow .hint{margin:0}
-.snd{border:0;cursor:pointer}
-.folder{--in:inR}.folder[data-dir=prev]{--in:inL}
-@keyframes inR{from{transform:translateX(70px) rotate(2deg);opacity:0}}
-@keyframes inL{from{transform:translateX(-70px) rotate(-2deg);opacity:0}}
-@keyframes slam{from{transform:rotate(-9deg) scale(3.2);opacity:0}to{transform:rotate(-9deg) scale(1);opacity:.7}}
-@keyframes clipdrop{from{transform:translateY(-46px)}}
-@keyframes shake{0%,100%{transform:none}25%{transform:translate(-5px,3px)}50%{transform:translate(5px,-3px)}75%{transform:translate(-3px,-2px)}}
-.stamp{animation:slam .25s steps(3) .2s both}
-.clip{animation:clipdrop .35s steps(5) .1s both}
-.sheet{transition:transform .12s}
-.folder.shake{animation:shake .3s steps(4)}
-</style></noscript>
+<noscript><style>.loader{display:none}</style></noscript>
 <link rel="icon" href="favicon.ico" sizes="any" />
 <link rel="icon" href="favicon.gif" type="image/gif" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -121,17 +106,17 @@ a{color:inherit;text-decoration:none}
 .folder{max-width:980px;margin:0 auto 30px;isolation:isolate;filter:drop-shadow(8px 8px 0 rgba(36,34,31,.35))}
 .folder>input{position:absolute;opacity:0;pointer-events:none}
 .tabs{display:flex;align-items:flex-end;gap:8px;padding-left:28px;margin-bottom:-4px;position:relative;z-index:2;flex-wrap:wrap}
-.tab{font-family:var(--px);font-size:.62rem;line-height:1.4;padding:14px 18px;background:var(--ch3);color:var(--cr);cursor:pointer;margin-top:4px;box-shadow:0 -4px 0 0 var(--ch),-4px 0 0 0 var(--ch),4px 0 0 0 var(--ch);transition:transform .1s}
+.tab{font-family:var(--px);font-size:.62rem;line-height:1.4;padding:14px 18px;background:var(--ch3);color:var(--cr);cursor:pointer;margin-top:4px;box-shadow:0 -4px 0 0 var(--ch),-4px 0 0 0 var(--ch),4px 0 0 0 var(--ch);transition:transform .2s ease,background-color .2s,color .2s}
 .tab:hover{transform:translateY(-4px)}
 .tab b{opacity:.6;margin-right:8px}
-#f1:checked~.tabs [for=f1],#f2:checked~.tabs [for=f2],#f3:checked~.tabs [for=f3]{background:var(--cr2);color:var(--ch);padding-bottom:22px;margin-bottom:-4px;margin-top:0;transform:none}
-#f1:focus-visible~.tabs [for=f1],#f2:focus-visible~.tabs [for=f2],#f3:focus-visible~.tabs [for=f3]{outline:4px dashed var(--ch);outline-offset:4px}
+#f1:checked~.tabs [for=f1],#f2:checked~.tabs [for=f2]{background:var(--cr2);color:var(--ch);padding-bottom:22px;margin-bottom:-4px;margin-top:0;transform:none}
+#f1:focus-visible~.tabs [for=f1],#f2:focus-visible~.tabs [for=f2]{outline:4px dashed var(--ch);outline-offset:4px}
 .folder-body{position:relative;margin:4px;background:var(--cr2);color:var(--ch);box-shadow:0 -4px 0 0 var(--ch),0 4px 0 0 var(--ch),-4px 0 0 0 var(--ch),4px 0 0 0 var(--ch)}
 .folder-body::before,.folder-body::after{content:"";position:absolute;z-index:-1;background:var(--cr);box-shadow:0 4px 0 0 var(--ch),-4px 0 0 0 var(--ch),4px 0 0 0 var(--ch)}
 .folder-body::before{left:30px;right:30px;bottom:-22px;height:22px}
 .folder-body::after{left:16px;right:16px;bottom:-12px;height:12px}
 .panel{display:none;grid-template-columns:1.1fr 1fr;gap:36px;padding:44px 40px 48px;position:relative}
-#f1:checked~.folder-body .p1,#f2:checked~.folder-body .p2,#f3:checked~.folder-body .p3{display:grid;animation:var(--in,inR) .45s steps(6)}
+#f1:checked~.folder-body .p1,#f2:checked~.folder-body .p2{display:grid;animation:var(--in,inR) .5s cubic-bezier(.2,.8,.2,1)}
 
 .sheet{position:relative;align-self:start;margin:4px;background:var(--cr);box-shadow:0 -4px 0 0 var(--ch),0 4px 0 0 var(--ch),-4px 0 0 0 var(--ch),4px 0 0 0 var(--ch);transform:rotate(-1.2deg)}
 .sheet .art{height:250px}
@@ -150,6 +135,48 @@ a{color:inherit;text-decoration:none}
  .tabs{padding-left:12px;gap:6px}.tab{font-size:.5rem;padding:12px 10px}
  .stamp{right:20px;bottom:18px}
 }
+
+/* folder motion */
+.hintrow{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;max-width:980px;margin:-30px auto 40px}
+.hintrow .hint{margin:0}
+.snd{border:0;cursor:pointer}
+.folder{--in:inR}.folder[data-dir=prev]{--in:inL}
+@keyframes inR{from{transform:translateX(56px);opacity:0}}
+@keyframes inL{from{transform:translateX(-56px);opacity:0}}
+@keyframes slam{from{transform:rotate(-9deg) scale(3.2);opacity:0}to{transform:rotate(-9deg) scale(1);opacity:.7}}
+@keyframes clipdrop{from{transform:translateY(-46px)}}
+@keyframes shake{0%,100%{transform:none}25%{transform:translate(-5px,3px)}50%{transform:translate(5px,-3px)}75%{transform:translate(-3px,-2px)}}
+.stamp{animation:slam .45s cubic-bezier(.2,.9,.3,1.15) .25s both}
+.clip{animation:clipdrop .5s cubic-bezier(.2,.9,.3,1.1) .15s both}
+.sheet{transition:transform .2s ease-out}
+.folder.shake{animation:shake .4s ease-out}
+
+/* showcase cards: click anywhere to launch */
+.panel.cards{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));align-content:start;gap:40px 36px}
+.panel-head{grid-column:1/-1}
+.panel-head h3{font-family:var(--px);font-size:.95rem;line-height:1.6;margin-bottom:8px}
+.panel-head p{color:#4a453d}
+.card{display:flex;flex-direction:column}
+.card .art{position:relative;overflow:hidden;height:190px;border-bottom:4px solid var(--ch)}
+.card .art svg,.card .art img{position:absolute;inset:0;width:100%;height:100%}
+.card .art img{object-fit:cover;object-position:top}
+.card .clip{pointer-events:none}
+.card-body{display:flex;flex-direction:column;gap:10px;flex:1;padding:16px 16px 18px}
+.card-body h4{font-family:var(--px);font-size:.85rem;line-height:1.6}
+.card-body p{line-height:1.5;color:#3b372f}
+.card .tag-group{margin:2px 0}
+.card .stretch:focus-visible{outline:none}
+.card .stretch::after{content:"";position:absolute;inset:0;z-index:1}
+.card .stretch:focus-visible::after{outline:4px dashed var(--ch);outline-offset:6px}
+.card .code{position:relative;z-index:2;align-self:flex-start}
+.launch{font-family:var(--px);font-size:.6rem;margin-top:auto;padding-top:4px}
+.card:hover .launch{text-decoration:underline}
+.card .stamp{top:14px;right:14px;bottom:auto;background:var(--cr);z-index:3}
+@keyframes cardIn{from{opacity:0;transform:translateY(22px)}}
+.panel.cards>.card{animation:cardIn .55s cubic-bezier(.2,.8,.2,1) backwards}
+.panel.cards>.card:nth-of-type(1){animation-delay:.12s}
+.panel.cards>.card:nth-of-type(2){animation-delay:.22s}
+.ghost{min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:4px dashed var(--mu);font-family:var(--px);font-size:.6rem;line-height:1.8;text-align:center;color:#6d655a}
 
 /* platforms */
 .platforms-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:34px}
@@ -280,9 +307,6 @@ a,button,label,.flip,.snd,.nav-hamburger,.pixel-btn,.tab,.platform-card,.soc a,i
       <p class="hero-greeting">Hello, I'm</p>
       <h1 class="hero-name glitch" data-text="SALMAN BASHEER">SALMAN BASHEER</h1>
       <p class="hero-tagline">Electronics Student · Open-Source Contributor · Competitive Programmer</p>
-      <div class="hero-cta">
-        <a href="#contact" class="pixel-btn secondary">Contact Me</a>
-      </div>
     </div>
     <div class="hero-figure">
       <div class="pcard" id="pcard">
@@ -326,7 +350,7 @@ a,button,label,.flip,.snd,.nav-hamburger,.pixel-btn,.tab,.platform-card,.soc a,i
         <div class="terminal-body">
           <p><span class="prompt">$</span> cat about.txt</p>
           <p class="terminal-text">Hi! I'm <strong>Salman Basheer</strong>, an electronics &amp; communication engineering student at <strong>RMK Engineering College</strong>, Chennai.</p>
-          <p class="terminal-text">I love building things — from low-level C++ programs to full-stack web apps. I contribute to open-source projects like <strong>Odysseus</strong> (self-hosted AI workspace) and <strong>Mousiki</strong> (TUI music player).</p>
+          <p class="terminal-text">I love building things — from low-level C++ programs to full-stack web apps. I contribute to open-source projects like <strong>Mousiki</strong> (TUI music player).</p>
           <p class="terminal-text">When I'm not coding, I'm exploring AI/LLM applications.</p>
           <p><span class="prompt">$</span> <span class="cursor">█</span></p>
         </div>
@@ -372,63 +396,46 @@ a,button,label,.flip,.snd,.nav-hamburger,.pixel-btn,.tab,.platform-card,.soc a,i
     <h2 class="section-title">Projects</h2>
     <div class="hintrow"><p class="hint">Click a tab, press ← → or swipe to flip through the files.</p><button class="pixel-btn small snd" id="snd" type="button" aria-pressed="true">SOUND: ON</button></div>
     <div class="folder">
-      <input type="radio" name="proj" id="f1" checked aria-label="Agrisense App" />
-      <input type="radio" name="proj" id="f2" aria-label="Odysseus" />
-      <input type="radio" name="proj" id="f3" aria-label="Mousiki" />
+      <input type="radio" name="proj" id="f1" checked aria-label="Websites" />
+      <input type="radio" name="proj" id="f2" aria-label="Open source" />
       <div class="tabs">
-        <label class="tab" for="f1"><b>01</b>Agrisense</label>
-        <label class="tab" for="f2"><b>02</b>Odysseus</label>
-        <label class="tab" for="f3"><b>03</b>Mousiki</label>
+        <label class="tab" for="f1"><b>01</b>Websites</label>
+        <label class="tab" for="f2"><b>02</b>Open Source</label>
       </div>
       <div class="folder-body">
-      <div class="panel p1">
-        <div class="sheet"><svg class="clip" viewBox="0 0 8 18" shape-rendering="crispEdges" fill="#47433c" aria-hidden="true"><rect x="2" y="0" width="4" height="2"/><rect x="0" y="2" width="2" height="13"/><rect x="6" y="2" width="2" height="10"/><rect x="2" y="15" width="4" height="2"/><rect x="2" y="5" width="2" height="9"/><rect x="4" y="5" width="2" height="2"/></svg><div class="art" aria-hidden="true">
-          <svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges"><rect width="400" height="180" fill="#24221f"/>
+      <div class="panel p1 cards">
+        <div class="panel-head"><h3>// live_stuff_i_shipped</h3><p>Things I built and put online. Click anywhere on a card to launch it.</p></div>
+        <div class="sheet card"><svg class="clip" viewBox="0 0 8 18" shape-rendering="crispEdges" fill="#47433c" aria-hidden="true"><rect x="2" y="0" width="4" height="2"/><rect x="0" y="2" width="2" height="13"/><rect x="6" y="2" width="2" height="10"/><rect x="2" y="15" width="4" height="2"/><rect x="2" y="5" width="2" height="9"/><rect x="4" y="5" width="2" height="2"/></svg><div class="art"><svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges"><rect width="400" height="180" fill="#24221f"/>
             <g fill="#f2eada"><rect y="140" width="400" height="40"/><rect x="190" y="80" width="20" height="60"/><rect x="150" y="90" width="40" height="20"/><rect x="130" y="70" width="30" height="20"/><rect x="210" y="70" width="40" height="20"/><rect x="250" y="50" width="30" height="20"/>
             <rect x="310" y="30" width="60" height="60"/><rect x="300" y="40" width="80" height="40"/></g>
             <g fill="#47433c"><rect x="20" y="150" width="30" height="10"/><rect x="90" y="165" width="40" height="10"/><rect x="260" y="152" width="30" height="10"/></g>
-            <g fill="#a89e8b" opacity=".6"><rect x="40" y="40" width="40" height="10"/><rect x="50" y="30" width="20" height="10"/><rect x="60" y="100" width="30" height="10"/></g></svg>
-        </div><p class="fig">FIG. 1 — AGRISENSE APP</p></div>
-        <div class="notes">
-          <p class="fileno">FILE 01 / 03</p>
-          <h3><span class="project-icon">🌾</span> Agrisense App</h3>
-          <p>A web application for agricultural sensing and monitoring, deployed on Vercel.</p>
-          <div class="tag-group small"><span class="pixel-tag">HTML</span><span class="pixel-tag">Web</span></div>
-          <div class="project-links"><a href="https://agrisense-app-ruby.vercel.app" target="_blank" rel="noopener" class="pixel-btn small">Live ↗</a><a href="https://github.com/Basheer-io/Agrisense-app" target="_blank" rel="noopener" class="pixel-btn small secondary">Code ↗</a></div>
+            <g fill="#a89e8b" opacity=".6"><rect x="40" y="40" width="40" height="10"/><rect x="50" y="30" width="20" height="10"/><rect x="60" y="100" width="30" height="10"/></g></svg><img src="assets/agrisense.png" alt="Screenshot of the Agrisense app" loading="lazy" onerror="this.remove()" /></div><p class="fig">FIG. 1 — AGRISENSE APP</p>
+          <div class="card-body">
+            <h4><a class="stretch" href="https://agrisense-app-ruby.vercel.app" target="_blank" rel="noopener"><span class="project-icon">🌾</span> Agrisense App</a></h4>
+            <p>A web application for agricultural sensing and monitoring, deployed on Vercel.</p>
+            <div class="tag-group small"><span class="pixel-tag">HTML</span><span class="pixel-tag">Web</span></div>
+            <a class="pixel-btn small secondary code" href="https://github.com/Basheer-io/Agrisense-app" target="_blank" rel="noopener">Code ↗</a>
+            <span class="launch" aria-hidden="true">LAUNCH ↗</span>
+          </div>
+          <span class="stamp">LIVE</span>
         </div>
-        <span class="stamp">LIVE</span>
+        <div class="card ghost" aria-hidden="true"><span>// next_project.txt</span><span>loading<span class="cursor">█</span></span></div>
       </div>
-      <div class="panel p2">
-        <div class="sheet"><svg class="clip" viewBox="0 0 8 18" shape-rendering="crispEdges" fill="#47433c" aria-hidden="true"><rect x="2" y="0" width="4" height="2"/><rect x="0" y="2" width="2" height="13"/><rect x="6" y="2" width="2" height="10"/><rect x="2" y="15" width="4" height="2"/><rect x="2" y="5" width="2" height="9"/><rect x="4" y="5" width="2" height="2"/></svg><div class="art" aria-hidden="true">
-          <svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges"><rect width="400" height="180" fill="#24221f"/>
-            <g fill="#a89e8b"><rect x="80" y="90" width="90" height="6"/><rect x="164" y="50" width="6" height="46"/><rect x="164" y="50" width="100" height="6"/><rect x="258" y="50" width="6" height="40"/><rect x="258" y="84" width="70" height="6"/><rect x="164" y="96" width="6" height="40"/><rect x="164" y="130" width="130" height="6"/><rect x="288" y="84" width="6" height="52"/></g>
-            <g fill="#f2eada"><rect x="60" y="76" width="30" height="30"/><rect x="154" y="36" width="30" height="30"/><rect x="250" y="70" width="28" height="28"/><rect x="320" y="70" width="30" height="30"/><rect x="154" y="120" width="30" height="30"/><rect x="278" y="120" width="30" height="30"/></g>
-            <g fill="#24221f"><rect x="68" y="84" width="14" height="14"/><rect x="162" y="44" width="14" height="14"/><rect x="328" y="78" width="14" height="14"/></g></svg>
-        </div><p class="fig">FIG. 2 — ODYSSEUS (CONTRIB)</p></div>
-        <div class="notes">
-          <p class="fileno">FILE 02 / 03</p>
-          <h3><span class="project-icon">🧠</span> Odysseus (Contrib)</h3>
-          <p>Self-hosted AI workspace. Contributed upstream pull requests and bug fixes.</p>
-          <div class="tag-group small"><span class="pixel-tag">Python</span><span class="pixel-tag">AI</span></div>
-          <div class="project-links"><a href="https://github.com/odysseus-dev/odysseus" target="_blank" rel="noopener" class="pixel-btn small secondary">View Repo ↗</a></div>
-        </div>
-        <span class="stamp">CONTRIB</span>
-      </div>
-      <div class="panel p3">
-        <div class="sheet"><svg class="clip" viewBox="0 0 8 18" shape-rendering="crispEdges" fill="#47433c" aria-hidden="true"><rect x="2" y="0" width="4" height="2"/><rect x="0" y="2" width="2" height="13"/><rect x="6" y="2" width="2" height="10"/><rect x="2" y="15" width="4" height="2"/><rect x="2" y="5" width="2" height="9"/><rect x="4" y="5" width="2" height="2"/></svg><div class="art" aria-hidden="true">
-          <svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges"><rect width="400" height="180" fill="#24221f"/>
+      <div class="panel p2 cards">
+        <div class="panel-head"><h3>// stuff_i_contributed_to</h3><p>Open-source projects I sent pull requests to. Click a card to open the repo.</p></div>
+        <div class="sheet card"><svg class="clip" viewBox="0 0 8 18" shape-rendering="crispEdges" fill="#47433c" aria-hidden="true"><rect x="2" y="0" width="4" height="2"/><rect x="0" y="2" width="2" height="13"/><rect x="6" y="2" width="2" height="10"/><rect x="2" y="15" width="4" height="2"/><rect x="2" y="5" width="2" height="9"/><rect x="4" y="5" width="2" height="2"/></svg><div class="art"><svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges"><rect width="400" height="180" fill="#24221f"/>
             <g fill="#f2eada"><rect x="50" y="90" width="26" height="70"/><rect x="86" y="50" width="26" height="110"/><rect x="122" y="70" width="26" height="90"/><rect x="158" y="20" width="26" height="140"/><rect x="194" y="80" width="26" height="80"/><rect x="230" y="40" width="26" height="120"/><rect x="266" y="100" width="26" height="60"/><rect x="302" y="60" width="26" height="100"/><rect x="338" y="110" width="26" height="50"/></g>
             <g fill="#24221f"><rect x="40" y="30" width="340" height="5"/><rect x="40" y="55" width="340" height="5"/><rect x="40" y="80" width="340" height="5"/><rect x="40" y="105" width="340" height="5"/><rect x="40" y="130" width="340" height="5"/></g>
-            <rect x="50" y="168" width="314" height="6" fill="#47433c"/><rect x="50" y="168" width="130" height="6" fill="#f2eada"/></svg>
-        </div><p class="fig">FIG. 3 — MOUSIKI (CONTRIB)</p></div>
-        <div class="notes">
-          <p class="fileno">FILE 03 / 03</p>
-          <h3><span class="project-icon">🎵</span> Mousiki (Contrib)</h3>
-          <p>Highly customizable TUI music player written in C++. Contributed PRs and handled upstream merges.</p>
-          <div class="tag-group small"><span class="pixel-tag">C++</span><span class="pixel-tag">TUI</span></div>
-          <div class="project-links"><a href="https://github.com/itzender5820/mousiki" target="_blank" rel="noopener" class="pixel-btn small secondary">View Repo ↗</a></div>
+            <rect x="50" y="168" width="314" height="6" fill="#47433c"/><rect x="50" y="168" width="130" height="6" fill="#f2eada"/></svg><img src="assets/mousiki.png" alt="Screenshot of the Mousiki music player" loading="lazy" onerror="this.remove()" /></div><p class="fig">FIG. 2 — MOUSIKI</p>
+          <div class="card-body">
+            <h4><a class="stretch" href="https://github.com/itzender5820/mousiki" target="_blank" rel="noopener"><span class="project-icon">🎵</span> Mousiki (Contrib)</a></h4>
+            <p>Highly customizable TUI music player written in C++. Contributed PRs and handled upstream merges.</p>
+            <div class="tag-group small"><span class="pixel-tag">C++</span><span class="pixel-tag">TUI</span></div>
+            <span class="launch" aria-hidden="true">VIEW REPO ↗</span>
+          </div>
+          <span class="stamp">CONTRIB</span>
         </div>
-        <span class="stamp">CONTRIB</span>
+        <div class="card ghost" aria-hidden="true"><span>// next_pr.pending</span><span>waiting<span class="cursor">█</span></span></div>
       </div>
       </div>
     </div>
