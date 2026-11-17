@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-:root{--ch:#24221f;--ch2:#2f2c28;--ch3:#47433c;--cr:#f2eada;--cr2:#e4d8c0;--mu:#a89e8b;--px:Press Start 2P,monospace}
+:root{--ch:#242427;--ch2:#3B312B;--ch3:#6A4A3C;--cr:#F3EADF;--cr2:#C8B29A;--mu:#C8B29A;--px:Press Start 2P,monospace}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{font-family:'Pixelify Sans',monospace;font-size:1.12rem;background:var(--ch);color:var(--cr);line-height:1.6;overflow-x:hidden}
@@ -24,15 +24,15 @@ a{color:inherit;text-decoration:none}
 .section{padding:110px 24px 90px;position:relative}
 .section::before{content:"";position:absolute;top:0;left:0;right:0;height:16px;background:repeating-linear-gradient(90deg,var(--prev,var(--cr)) 0 16px,transparent 16px 32px)}
 .light{--prev:var(--ch)}
-.grid-bg{background-image:linear-gradient(rgba(242,234,218,.06) 2px,transparent 2px),linear-gradient(90deg,rgba(242,234,218,.06) 2px,transparent 2px);background-size:32px 32px}
-.light.grid-bg{background-image:linear-gradient(rgba(36,34,31,.07) 2px,transparent 2px),linear-gradient(90deg,rgba(36,34,31,.07) 2px,transparent 2px)}
+.grid-bg{background-image:linear-gradient(rgba(243,234,223,.06) 2px,transparent 2px),linear-gradient(90deg,rgba(243,234,223,.06) 2px,transparent 2px);background-size:32px 32px}
+.light.grid-bg{background-image:linear-gradient(rgba(36,36,39,.07) 2px,transparent 2px),linear-gradient(90deg,rgba(36,36,39,.07) 2px,transparent 2px)}
 .inner{max-width:1100px;margin:0 auto}
 .section-title{font-family:var(--px);font-size:clamp(1.1rem,3.4vw,2rem);line-height:1.5;margin-bottom:56px;display:inline-block;position:relative;padding-bottom:14px}
 .section-title::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:8px;background:repeating-linear-gradient(90deg,var(--fg) 0 16px,transparent 16px 24px)}
 
 /* pixel box: notched corners + hard shadow */
 .pixel-border{background:var(--card);color:var(--fg);margin:4px;box-shadow:0 -4px 0 0 var(--fg),0 4px 0 0 var(--fg),-4px 0 0 0 var(--fg),4px 0 0 0 var(--fg);filter:drop-shadow(8px 8px 0 var(--sh,rgba(0,0,0,.45)))}
-.light .pixel-border{--sh:rgba(36,34,31,.35)}
+.light .pixel-border{--sh:rgba(36,36,39,.35)}
 
 .pixel-btn{display:inline-block;font-family:var(--px);font-size:.72rem;line-height:1.4;padding:16px 22px;margin:4px;background:var(--fg);color:var(--bg);box-shadow:0 -4px 0 0 var(--fg),0 4px 0 0 var(--fg),-4px 0 0 0 var(--fg),4px 0 0 0 var(--fg);transition:transform .1s}
 .pixel-btn:hover{transform:translate(4px,4px)}
@@ -69,7 +69,7 @@ a{color:inherit;text-decoration:none}
 @keyframes float{50%{transform:translateY(-28px)}}
 
 /* ticker */
-.ticker{background:var(--cr);color:var(--ch);border-block:6px solid var(--ch);overflow:hidden;position:relative;z-index:3}
+.ticker{background:var(--cr2);color:var(--ch);border-block:6px solid var(--ch);overflow:hidden;position:relative;z-index:3}
 .track{display:flex;width:max-content;animation:slide 26s linear infinite}
 .track span{font-family:var(--px);font-size:.85rem;padding:20px 22px;white-space:nowrap}
 .track span:nth-child(even){opacity:.45}
@@ -80,13 +80,13 @@ a{color:inherit;text-decoration:none}
 .terminal{--card:var(--ch);--fg:var(--ch);color:var(--cr)}
 .terminal-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--ch3)}
 .dot{width:14px;height:14px;background:var(--cr)}.dot.yellow{background:var(--mu)}.dot.green{background:var(--ch);border:2px solid var(--cr)}
-.terminal-title{margin-left:10px;color:var(--mu);font-size:.9rem}
+.terminal-title{margin-left:10px;color:var(--cr);font-size:.9rem}
 .terminal-body{padding:24px;display:grid;gap:14px}
 .terminal-text{color:var(--cr2)}.prompt{color:var(--mu)}
 .cursor{animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
 .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:26px}
 .stat-card{padding:22px 16px;display:flex;flex-direction:column;gap:12px;transition:transform .15s steps(2)}
-.stat-card:nth-child(2),.stat-card:nth-child(3){--card:var(--ch);color:var(--cr)}
+.stat-card:nth-child(2),.stat-card:nth-child(3){--card:var(--ch2);color:var(--cr)}
 .stat-card:hover{transform:translateY(-8px)}
 .stat-num{font-family:var(--px);font-size:1.3rem}
 .stat-label{opacity:.8;font-size:1rem}
@@ -102,8 +102,8 @@ a{color:inherit;text-decoration:none}
 .tag-group.small{gap:8px}.tag-group.small .pixel-tag{font-size:.8rem;padding:1px 10px;box-shadow:0 0 0 2px var(--fg)}
 
 /* projects: office folder */
-.hint{margin:-30px 0 40px;color:#4a453d}
-.folder{max-width:980px;margin:0 auto 30px;isolation:isolate;filter:drop-shadow(8px 8px 0 rgba(36,34,31,.35))}
+.hint{margin:-30px 0 40px;color:#3B312B}
+.folder{max-width:980px;margin:0 auto 30px;isolation:isolate;filter:drop-shadow(8px 8px 0 rgba(36,36,39,.35))}
 .folder>input{position:absolute;opacity:0;pointer-events:none}
 .tabs{display:flex;align-items:flex-end;gap:8px;padding-left:28px;margin-bottom:-4px;position:relative;z-index:2;flex-wrap:wrap}
 .tab{font-family:var(--px);font-size:.62rem;line-height:1.4;padding:14px 18px;background:var(--ch3);color:var(--cr);cursor:pointer;margin-top:4px;box-shadow:0 -4px 0 0 var(--ch),-4px 0 0 0 var(--ch),4px 0 0 0 var(--ch);transition:transform .2s ease,background-color .2s,color .2s}
@@ -120,16 +120,16 @@ a{color:inherit;text-decoration:none}
 
 .sheet{position:relative;align-self:start;margin:4px;background:var(--cr);box-shadow:0 -4px 0 0 var(--ch),0 4px 0 0 var(--ch),-4px 0 0 0 var(--ch),4px 0 0 0 var(--ch);transform:rotate(-1.2deg)}
 .sheet .art{height:250px}
-.fig{font-family:var(--px);font-size:.55rem;padding:12px 14px;color:#4a453d}
+.fig{font-family:var(--px);font-size:.55rem;padding:12px 14px;color:#3B312B}
 .clip{position:absolute;left:18px;top:-18px;width:26px;height:58px;z-index:3}
-.notes{padding:10px 4px;background:repeating-linear-gradient(transparent 0 33px,rgba(36,34,31,.14) 33px 35px)}
-.fileno{font-family:var(--px);font-size:.55rem;color:#4a453d;margin-bottom:14px}
+.notes{padding:10px 4px;background:repeating-linear-gradient(transparent 0 33px,rgba(36,36,39,.14) 33px 35px)}
+.fileno{font-family:var(--px);font-size:.55rem;color:#3B312B;margin-bottom:14px}
 .notes h3{font-family:var(--px);font-size:1rem;line-height:1.6;margin-bottom:12px}
-.notes p{line-height:35px;color:#3b372f}
+.notes p{line-height:35px;color:#242427}
 .notes .fileno{line-height:1.4}
 .notes .tag-group{margin:14px 0 20px}
 .project-links{display:flex;gap:6px;flex-wrap:wrap}
-.stamp{position:absolute;right:34px;bottom:30px;font-family:var(--px);font-size:.7rem;border:4px solid var(--ch);padding:9px 12px;transform:rotate(-9deg);opacity:.7;pointer-events:none}
+.stamp{position:absolute;right:34px;bottom:30px;font-family:var(--px);font-size:.7rem;border:4px solid var(--pink,var(--ch));padding:9px 12px;transform:rotate(-9deg);opacity:.92;pointer-events:none}
 @media(max-width:860px){
  .panel{grid-template-columns:1fr;padding:30px 20px 60px;gap:28px}.sheet .art{height:190px}
  .tabs{padding-left:12px;gap:6px}.tab{font-size:.5rem;padding:12px 10px}
@@ -143,7 +143,7 @@ a{color:inherit;text-decoration:none}
 .folder{--in:inR}.folder[data-dir=prev]{--in:inL}
 @keyframes inR{from{transform:translateX(56px);opacity:0}}
 @keyframes inL{from{transform:translateX(-56px);opacity:0}}
-@keyframes slam{from{transform:rotate(-9deg) scale(3.2);opacity:0}to{transform:rotate(-9deg) scale(1);opacity:.7}}
+@keyframes slam{from{transform:rotate(-9deg) scale(3.2);opacity:0}to{transform:rotate(-9deg) scale(1);opacity:.92}}
 @keyframes clipdrop{from{transform:translateY(-46px)}}
 @keyframes shake{0%,100%{transform:none}25%{transform:translate(-5px,3px)}50%{transform:translate(5px,-3px)}75%{transform:translate(-3px,-2px)}}
 .stamp{animation:slam .45s cubic-bezier(.2,.9,.3,1.15) .25s both}
@@ -155,7 +155,7 @@ a{color:inherit;text-decoration:none}
 .panel.cards{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));align-content:start;gap:40px 36px}
 .panel-head{grid-column:1/-1}
 .panel-head h3{font-family:var(--px);font-size:.95rem;line-height:1.6;margin-bottom:8px}
-.panel-head p{color:#4a453d}
+.panel-head p{color:#3B312B}
 .card{display:flex;flex-direction:column}
 .card .art{position:relative;overflow:hidden;height:190px;border-bottom:4px solid var(--ch)}
 .card .art svg,.card .art img{position:absolute;inset:0;width:100%;height:100%}
@@ -163,7 +163,7 @@ a{color:inherit;text-decoration:none}
 .card .clip{pointer-events:none}
 .card-body{display:flex;flex-direction:column;gap:10px;flex:1;padding:16px 16px 18px}
 .card-body h4{font-family:var(--px);font-size:.85rem;line-height:1.6}
-.card-body p{line-height:1.5;color:#3b372f}
+.card-body p{line-height:1.5;color:#242427}
 .card .tag-group{margin:2px 0}
 .card .stretch:focus-visible{outline:none}
 .card .stretch::after{content:"";position:absolute;inset:0;z-index:1}
@@ -176,7 +176,16 @@ a{color:inherit;text-decoration:none}
 .panel.cards>.card{animation:cardIn .55s cubic-bezier(.2,.8,.2,1) backwards}
 .panel-head+.card{animation-delay:.12s}
 .panel.cards>.card+.card{animation-delay:.24s}
-.ghost{min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:4px dashed var(--mu);font-family:var(--px);font-size:.6rem;line-height:1.8;text-align:center;color:#6d655a}
+.ghost{min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:4px dashed var(--ch3);font-family:var(--px);font-size:.6rem;line-height:1.8;text-align:center;color:#3B312B}
+
+/* projects: Ocean ruby radiance palette + manila folder (this section only) */
+.projects.section.light{--bg:#F3EADF;--fg:#242427;--card:#C8B29A;--prev:#242427;--ch:#06285A;--ch2:#005BB3;--ch3:#005BB3;--cr:#F4FAFC;--cr2:#E6C98F;--mu:#B2DAE4;--pink:#D8226C;--orange:#F86A38;--green:#029456;background-image:linear-gradient(rgba(36,36,39,.07) 2px,transparent 2px),linear-gradient(90deg,rgba(36,36,39,.07) 2px,transparent 2px);background-size:32px 32px}
+.projects .hint{color:#3B312B}
+.projects .folder{--fg:var(--ch);--bg:var(--cr);filter:drop-shadow(8px 8px 0 rgba(3,20,50,.5))}
+.projects .tab{background:#C9A56A;color:var(--ch)}
+.projects .panel-head p,.projects .fig,.projects .ghost{color:#0F4380}
+.projects .card-body p{color:var(--ch)}
+.platforms{--prev:#F3EADF}
 
 /* platforms */
 .platforms-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:34px}
@@ -187,7 +196,7 @@ a{color:inherit;text-decoration:none}
 /* contact */
 .contact{text-align:center}
 .contact .section-title{font-size:clamp(1.2rem,4vw,2.4rem)}
-.contact-text{font-size:1.25rem;margin:0 auto 40px;max-width:38ch;color:#4a453d}
+.contact-text{font-size:1.25rem;margin:0 auto 40px;max-width:38ch;color:#3B312B}
 .contact-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .contact-links .pixel-btn.primary{background:var(--ch);color:var(--cr)}
 .footer{padding:36px 24px;text-align:center;background:var(--ch);border-top:6px solid var(--cr);color:var(--mu)}
@@ -205,7 +214,7 @@ a{color:inherit;text-decoration:none}
 /* loader */
 body.is-loading{overflow:hidden}
 .loader{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;color:var(--cr)}
-.shutter{position:absolute;left:0;right:0;height:50%;background:var(--ch);transition:transform .9s steps(9) .15s;background-image:linear-gradient(rgba(242,234,218,.06) 2px,transparent 2px),linear-gradient(90deg,rgba(242,234,218,.06) 2px,transparent 2px);background-size:32px 32px}
+.shutter{position:absolute;left:0;right:0;height:50%;background:var(--ch);transition:transform .9s steps(9) .15s;background-image:linear-gradient(rgba(243,234,223,.06) 2px,transparent 2px),linear-gradient(90deg,rgba(243,234,223,.06) 2px,transparent 2px);background-size:32px 32px}
 .shutter.top{top:0;border-bottom:6px solid var(--cr)}
 .shutter.bottom{bottom:0;border-top:6px solid var(--cr)}
 .loader.done .shutter.top{transform:translateY(-100%)}
@@ -405,11 +414,11 @@ a,button,label,.flip,.snd,.nav-hamburger,.pixel-btn,.tab,.platform-card,.soc a,i
       <div class="folder-body">
       <div class="panel p1 cards">
         <div class="panel-head"><h3>// live_stuff_i_shipped</h3><p>Things I built and put online. Click anywhere on a card to launch it.</p></div>
-        <div class="sheet card"><svg class="clip" viewBox="0 0 8 18" shape-rendering="crispEdges" fill="#47433c" aria-hidden="true"><rect x="2" y="0" width="4" height="2"/><rect x="0" y="2" width="2" height="13"/><rect x="6" y="2" width="2" height="10"/><rect x="2" y="15" width="4" height="2"/><rect x="2" y="5" width="2" height="9"/><rect x="4" y="5" width="2" height="2"/></svg><div class="art"><svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges"><rect width="400" height="180" fill="#24221f"/>
-            <g fill="#f2eada"><rect y="140" width="400" height="40"/><rect x="190" y="80" width="20" height="60"/><rect x="150" y="90" width="40" height="20"/><rect x="130" y="70" width="30" height="20"/><rect x="210" y="70" width="40" height="20"/><rect x="250" y="50" width="30" height="20"/>
-            <rect x="310" y="30" width="60" height="60"/><rect x="300" y="40" width="80" height="40"/></g>
-            <g fill="#47433c"><rect x="20" y="150" width="30" height="10"/><rect x="90" y="165" width="40" height="10"/><rect x="260" y="152" width="30" height="10"/></g>
-            <g fill="#a89e8b" opacity=".6"><rect x="40" y="40" width="40" height="10"/><rect x="50" y="30" width="20" height="10"/><rect x="60" y="100" width="30" height="10"/></g></svg><img src="assets/agrisense.png" alt="Screenshot of the Agrisense app" loading="lazy" onerror="this.remove()" /></div><p class="fig">FIG. 1 — AGRISENSE APP</p>
+        <div class="sheet card"><svg class="clip" viewBox="0 0 8 18" shape-rendering="crispEdges" fill="#F86A38" aria-hidden="true"><rect x="2" y="0" width="4" height="2"/><rect x="0" y="2" width="2" height="13"/><rect x="6" y="2" width="2" height="10"/><rect x="2" y="15" width="4" height="2"/><rect x="2" y="5" width="2" height="9"/><rect x="4" y="5" width="2" height="2"/></svg><div class="art"><svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges"><rect width="400" height="180" fill="#06285A"/>
+            <g fill="#F4FAFC"><rect y="140" width="400" height="40"/><rect x="190" y="80" width="20" height="60"/><rect x="150" y="90" width="40" height="20"/><rect x="130" y="70" width="30" height="20"/><rect x="210" y="70" width="40" height="20"/><rect x="250" y="50" width="30" height="20"/>
+            <rect x="310" y="30" width="60" height="60" fill="#F86A38"/><rect x="300" y="40" width="80" height="40" fill="#F86A38"/></g>
+            <g fill="#005BB3"><rect x="20" y="150" width="30" height="10"/><rect x="90" y="165" width="40" height="10"/><rect x="260" y="152" width="30" height="10"/></g>
+            <g fill="#029456" opacity=".9"><rect x="40" y="40" width="40" height="10"/><rect x="50" y="30" width="20" height="10"/><rect x="60" y="100" width="30" height="10"/></g></svg><img src="assets/agrisense.png" alt="Screenshot of the Agrisense app" loading="lazy" onerror="this.remove()" /></div><p class="fig">FIG. 1 — AGRISENSE APP</p>
           <div class="card-body">
             <h4><a class="stretch" href="https://agrisense-app-ruby.vercel.app" target="_blank" rel="noopener"><span class="project-icon">🌾</span> Agrisense App</a></h4>
             <p>A web application for agricultural sensing and monitoring, deployed on Vercel.</p>
@@ -423,10 +432,10 @@ a,button,label,.flip,.snd,.nav-hamburger,.pixel-btn,.tab,.platform-card,.soc a,i
       </div>
       <div class="panel p2 cards">
         <div class="panel-head"><h3>// stuff_i_contributed_to</h3><p>Open-source projects I sent pull requests to. Click a card to open the repo.</p></div>
-        <div class="sheet card"><svg class="clip" viewBox="0 0 8 18" shape-rendering="crispEdges" fill="#47433c" aria-hidden="true"><rect x="2" y="0" width="4" height="2"/><rect x="0" y="2" width="2" height="13"/><rect x="6" y="2" width="2" height="10"/><rect x="2" y="15" width="4" height="2"/><rect x="2" y="5" width="2" height="9"/><rect x="4" y="5" width="2" height="2"/></svg><div class="art"><svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges"><rect width="400" height="180" fill="#24221f"/>
-            <g fill="#f2eada"><rect x="50" y="90" width="26" height="70"/><rect x="86" y="50" width="26" height="110"/><rect x="122" y="70" width="26" height="90"/><rect x="158" y="20" width="26" height="140"/><rect x="194" y="80" width="26" height="80"/><rect x="230" y="40" width="26" height="120"/><rect x="266" y="100" width="26" height="60"/><rect x="302" y="60" width="26" height="100"/><rect x="338" y="110" width="26" height="50"/></g>
-            <g fill="#24221f"><rect x="40" y="30" width="340" height="5"/><rect x="40" y="55" width="340" height="5"/><rect x="40" y="80" width="340" height="5"/><rect x="40" y="105" width="340" height="5"/><rect x="40" y="130" width="340" height="5"/></g>
-            <rect x="50" y="168" width="314" height="6" fill="#47433c"/><rect x="50" y="168" width="130" height="6" fill="#f2eada"/></svg><img src="assets/mousiki.png" alt="Screenshot of the Mousiki music player" loading="lazy" onerror="this.remove()" /></div><p class="fig">FIG. 2 — MOUSIKI</p>
+        <div class="sheet card"><svg class="clip" viewBox="0 0 8 18" shape-rendering="crispEdges" fill="#F86A38" aria-hidden="true"><rect x="2" y="0" width="4" height="2"/><rect x="0" y="2" width="2" height="13"/><rect x="6" y="2" width="2" height="10"/><rect x="2" y="15" width="4" height="2"/><rect x="2" y="5" width="2" height="9"/><rect x="4" y="5" width="2" height="2"/></svg><div class="art"><svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges"><rect width="400" height="180" fill="#06285A"/>
+            <g fill="#F4FAFC"><rect x="50" y="90" width="26" height="70"/><rect x="86" y="50" width="26" height="110"/><rect x="122" y="70" width="26" height="90"/><rect x="158" y="20" width="26" height="140" fill="#D8226C"/><rect x="194" y="80" width="26" height="80"/><rect x="230" y="40" width="26" height="120"/><rect x="266" y="100" width="26" height="60"/><rect x="302" y="60" width="26" height="100"/><rect x="338" y="110" width="26" height="50"/></g>
+            <g fill="#06285A"><rect x="40" y="30" width="340" height="5"/><rect x="40" y="55" width="340" height="5"/><rect x="40" y="80" width="340" height="5"/><rect x="40" y="105" width="340" height="5"/><rect x="40" y="130" width="340" height="5"/></g>
+            <rect x="50" y="168" width="314" height="6" fill="#005BB3"/><rect x="50" y="168" width="130" height="6" fill="#F86A38"/></svg><img src="assets/mousiki.png" alt="Screenshot of the Mousiki music player" loading="lazy" onerror="this.remove()" /></div><p class="fig">FIG. 2 — MOUSIKI</p>
           <div class="card-body">
             <h4><a class="stretch" href="https://github.com/itzender5820/mousiki" target="_blank" rel="noopener"><span class="project-icon">🎵</span> Mousiki (Contrib)</a></h4>
             <p>Highly customizable TUI music player written in C++. Contributed PRs and handled upstream merges.</p>
